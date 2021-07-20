@@ -1,0 +1,47 @@
+{
+  "name": "typescript-firebase",
+  "version": "1.0.0",
+  "description": "--- Node Express Firebase assessment",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vd89/node-typescript-firebase.git"
+  },
+  "keywords": [
+    "Node Js",
+    "Express ",
+    "TypeScript",
+    "Firebase"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vd89/node-typescript-firebase/issues"
+  },
+  "homepage": "https://github.com/vd89/node-typescript-firebase#readme",
+  "engines": {
+    "node": "16.4.1",
+    "npm": "7.19.1",
+    "yarn": "1.22.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.12",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node ./dist/server.generated.js",
+    "dev": "nodemon",
+    "build": " rimraf dist && webpack --mode=production --config webpack.config.server.js",
+    "clear": "rimraf dist"
+  }
+}
